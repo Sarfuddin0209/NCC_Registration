@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NCC | CUTM Paralakhemundi</title>
+
+    <meta name="description"
+          content="National Cadet Corps at Centurion University of Technology and Management, Paralakhemundi">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --dark-green: #071c14;
+            --green: #123c2a;
+            --light-green: #1f6041;
+            --gold: #d4af37;
+            --light-gold: #f5d77a;
+            --white: #ffffff;
+            --light: #f1f5f2;
+            --gray: #b9c7be;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--dark-green);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7, 28, 20, 0.97);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: white;
+            padding: 3px;
+        }
+
+        .brand-text h3 {
+            color: var(--gold);
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+        .brand-text span {
+            color: var(--gray);
+            font-size: 11px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .ncc-logo {
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            color: var(--gold);
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            padding: 150px 0 90px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background:
+                linear-gradient(
+                    rgba(7, 28, 20, 0.83),
+                    rgba(7, 28, 20, 0.95)
+                ),
+                url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438")
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            border-radius: 30px;
+            padding: 8px 22px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 90px);
+            line-height: 1.1;
+            letter-spacing: 5px;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .hero h2 {
+            margin-top: 20px;
+            font-size: clamp(18px, 3vw, 28px);
+            font-weight: normal;
+        }
+
+        .hero p {
+            margin: 20px auto;
+            max-width: 700px;
+            color: var(--gray);
+            font-size: 16px;
+        }
+
+        .motto {
+            color: var(--light-gold);
+            font-size: 22px;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            border: none;
+            cursor: pointer;
+            padding: 13px 27px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark-green);
+        }
+
+        .btn-primary:hover {
+            background: var(--light-gold);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--dark-green);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h2 {
+            color: var(--gold);
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .section-heading .line {
+            width: 70px;
+            height: 3px;
+            background: var(--gold);
+            margin: 18px auto;
+        }
+
+        /* ABOUT */
+        .about {
+            background: #0b281c;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 350px;
+            border-radius: 12px;
+            background:
+                linear-gradient(
+                    rgba(7, 28, 20, 0.35),
+                    rgba(7, 28, 20, 0.7)
+                ),
+                url("https://images.unsplash.com/photo-1531482615713-2afd69097998")
+                center/cover;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .about-content h3 {
+            font-size: 28px;
+            color: var(--light-gold);
+            margin-bottom: 18px;
+        }
+
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-list li {
+            margin: 12px 0;
+            color: var(--light);
+        }
+
+        .about-list li::before {
+            content: "★";
+            color: var(--gold);
+            margin-right: 10px;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            padding: 30px 25px;
+            background: var(--green);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-icon {
+            font-size: 36px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            color: var(--light-gold);
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* HISTORY */
+        .history {
+            background: #0b281c;
+        }
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            border-left: 2px solid var(--gold);
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+            background: var(--green);
+            border-radius: 8px;
+            padding: 24px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--gold);
+            left: -39px;
+            top: 28px;
+            border: 3px solid var(--dark-green);
+        }
+
+        .timeline-item h3 {
+            color: var(--light-gold);
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: var(--gray);
+        }
+
+        /* CERTIFICATES */
+        .certificate-card {
+            text-align: center;
+        }
+
+        .certificate-letter {
+            width: 75px;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--dark-green);
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        /* =========================================
+           NCC BENEFITS - NEW SECTION
+        ========================================= */
+
+        .benefits-section {
+            background: #0b281c;
+        }
+
+        .benefits-section .cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .benefit-list {
+            list-style: none;
+            margin-top: 18px;
+            padding: 0;
+        }
+
+        .benefit-list li {
+            color: var(--light);
+            font-size: 13px;
+            margin: 9px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .benefit-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .benefits-note {
+            max-width: 900px;
+            margin: 40px auto 0;
+            padding: 18px 22px;
+            border-left: 3px solid var(--gold);
+            background: var(--green);
+            color: var(--gray);
+            font-size: 13px;
+            border-radius: 5px;
+        }
+
+        .benefits-note strong {
+            color: var(--light-gold);
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            background:
+                linear-gradient(
+                    rgba(7, 28, 20, 0.9),
+                    rgba(7, 28, 20, 0.9)
+                ),
+                url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
+                center/cover;
+        }
+
+        .cta h2 {
+            color: var(--gold);
+            font-size: clamp(28px, 5vw, 45px);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #0b281c;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .contact-card {
+            text-align: center;
+            padding: 28px 20px;
+            background: var(--green);
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .contact-card h3 {
+            color: var(--light-gold);
+            margin: 12px 0;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: var(--gray);
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        .contact-card a:hover {
+            color: var(--gold);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            background: #04110c;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            width: 100%;
+            max-width: 520px;
+            margin: 50px auto;
+            padding: 35px;
+            border-radius: 12px;
+            background: #102f21;
+            border: 1px solid var(--gold);
+            position: relative;
+        }
+
+        .modal-content h2 {
+            text-align: center;
+            color: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .close {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-size: 30px;
+            color: var(--gray);
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: var(--gold);
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--light-gold);
+            font-size: 13px;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 5px;
+            outline: none;
+            background: #071c14;
+            color: white;
+            font-size: 14px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--gold);
+        }
+
+        .form-group select option {
+            background: #071c14;
+        }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .form-note {
+            color: var(--gray);
+            font-size: 11px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .cards,
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits-section .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-container {
+                min-height: 70px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                flex-direction: column;
+                background: var(--dark-green);
+                border-top: 1px solid rgba(212, 175, 55, 0.3);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .ncc-logo {
+                width: 43px;
+                height: 43px;
+            }
+
+            .brand img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .brand-text h3 {
+                font-size: 13px;
+            }
+
+            .brand-text span {
+                font-size: 9px;
+            }
+
+            .cards,
+            .contact-grid,
+            .benefits-section .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+            }
+
+            .benefits-note {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <nav>
+        <div class="container nav-container">
+
+            <a href="#home" class="brand">
+
+                <img
+                    src="cutm-logo.jpg"
+                    alt="CUTM Logo">
+
+                <div class="brand-text">
+                    <h3>NCC CUTM</h3>
+                    <span>Paralakhemundi Campus</span>
+                </div>
+
+            </a>
+
+            <div
+                class="menu-toggle"
+                onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <ul
+                class="nav-links"
+                id="navLinks">
+
+                <li>
+                    <a
+                        href="#home"
+                        onclick="closeMenu()">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#about"
+                        onclick="closeMenu()">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#history"
+                        onclick="closeMenu()">
+                        History
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#certificates"
+                        onclick="closeMenu()">
+                        Certificates
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#benefits"
+                        onclick="closeMenu()">
+                        Benefits
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#contact"
+                        onclick="closeMenu()">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#"
+                        onclick="openModal(); return false;"
+                        class="btn btn-primary">
+                        Register
+                    </a>
+                </li>
+
+            </ul>
+
+            <img
+                src="ncc-logo.jpg"
+                alt="NCC Logo"
+                class="ncc-logo">
+
+        </div>
+    </nav>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section
+        class="hero"
+        id="home">
+
+        <div class="container hero-content">
+
+            <div class="hero-badge">
+                UNITY • DISCIPLINE • SERVICE
+            </div>
+
+            <h1>NCC</h1>
+
+            <h2>
+                National Cadet Corps
+            </h2>
+
+            <p>
+                Building character, discipline, leadership and national
+                responsibility among the youth of India.
+            </p>
+
+            <div class="motto">
+                "Unity and Discipline"
+            </div>
+
+            <div class="btn-group">
+
+                <a
+                    href="#about"
+                    class="btn btn-primary">
+                    Explore NCC
+                </a>
+
+                <button
+                    class="btn btn-outline"
+                    onclick="openModal()">
+                    Register Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <section
+        class="about"
+        id="about">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>About NCC</h2>
+
+                <div class="line"></div>
+
+                <p>
+                    An opportunity to develop discipline, leadership,
+                    confidence and patriotism.
+                </p>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-image"></div>
+
+                <div class="about-content">
+
+                    <h3>
+                        Developing Responsible Citizens
+                    </h3>
+
+                    <p>
+                        The National Cadet Corps is a youth development
+                        organisation that provides military training,
+                        discipline and leadership opportunities to students.
+                    </p>
+
+                    <p>
+                        NCC encourages young people to become responsible
+                        citizens and contribute positively to society.
+                    </p>
+
+                    <ul class="about-list">
+
+                        <li>
+                            Personality development
+                        </li>
+
+                        <li>
+                            Leadership and teamwork
+                        </li>
+
+                        <li>
+                            Discipline and responsibility
+                        </li>
+
+                        <li>
+                            Adventure and outdoor activities
+                        </li>
+
+                        <li>
+                            National integration
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         NCC ACTIVITIES
+    ========================================== -->
+
+    <section id="activities">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    NCC Activities
+                </h2>
+
+                <div class="line"></div>
+
+                <p>
+                    Learn essential skills through training and practical
+                    experiences.
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🎖️
+                    </div>
+
+                    <h3>
+                        Drill Training
+                    </h3>
+
+                    <p>
+                        Develop discipline, coordination, confidence and
+                        teamwork through parade and drill practice.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🏕️
+                    </div>
+
+                    <h3>
+                        Annual Training Camp
+                    </h3>
+
+                    <p>
+                        Participate in camps that develop leadership,
+                        endurance, teamwork and self-confidence.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Defence Awareness
+                    </h3>
+
+                    <p>
+                        Gain awareness of the armed forces, national security
+                        and the responsibilities of citizens.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌳
+                    </div>
+
+                    <h3>
+                        Social Service
+                    </h3>
+
+                    <p>
+                        Participate in community service, cleanliness drives,
+                        awareness programmes and social initiatives.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        ⛰️
+                    </div>
+
+                    <h3>
+                        Adventure Activities
+                    </h3>
+
+                    <p>
+                        Develop courage and confidence through outdoor and
+                        adventure-based activities.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🇮🇳
+                    </div>
+
+                    <h3>
+                        National Integration
+                    </h3>
+
+                    <p>
+                        Promote unity, cultural understanding and national
+                        spirit among cadets.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         HISTORY
+    ========================================== -->
+
+    <section
+        class="history"
+        id="history">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    NCC History
+                </h2>
+
+                <div class="line"></div>
+
+                <p>
+                    Important milestones in the development of the National
+                    Cadet Corps.
+                </p>
+
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <h3>
+                        1917 – University Officers Training Corps
+                    </h3>
+
+                    <p>
+                        The early foundation of organised student military
+                        training in India was established.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h3>
+                        1948 – Establishment of NCC
+                    </h3>
+
+                    <p>
+                        The National Cadet Corps was established in India
+                        after independence.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h3>
+                        1963 – Expansion of Training
+                    </h3>
+
+                    <p>
+                        NCC training and activities expanded to support
+                        national service and youth development.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h3>
+                        Today – Youth Development
+                    </h3>
+
+                    <p>
+                        NCC continues to develop leadership, discipline,
+                        unity and service among students.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CERTIFICATES
+    ========================================== -->
+
+    <section id="certificates">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    NCC Certificates
+                </h2>
+
+                <div class="line"></div>
+
+                <p>
+                    NCC certificate levels help cadets demonstrate their
+                    training and participation.
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <div class="card certificate-card">
+
+                    <div class="certificate-letter">
+                        A
+                    </div>
+
+                    <h3>
+                        Certificate A
+                    </h3>
+
+                    <p>
+                        Generally associated with junior division or junior
+                        wing NCC training, subject to applicable rules.
+                    </p>
+
+                </div>
+
+
+                <div class="card certificate-card">
+
+                    <div class="certificate-letter">
+                        B
+                    </div>
+
+                    <h3>
+                        Certificate B
+                    </h3>
+
+                    <p>
+                        Awarded to eligible cadets who complete the prescribed
+                        training and examination requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="card certificate-card">
+
+                    <div class="certificate-letter">
+                        C
+                    </div>
+
+                    <h3>
+                        Certificate C
+                    </h3>
+
+                    <p>
+                        An advanced NCC certificate awarded to eligible senior
+                        division or senior wing cadets.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         BENEFITS - REPLACED SECTION
+    ========================================== -->
+
+    <section
+        id="benefits"
+        class="benefits-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    Benefits of Joining NCC
+                </h2>
+
+                <div class="line"></div>
+
+                <p>
+                    NCC provides valuable opportunities for defence careers,
+                    employment, leadership, adventure and personal development.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- DEFENCE CAREER -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🎖️
+                    </div>
+
+                    <h3>
+                        Defence Career Opportunities
+                    </h3>
+
+                    <p>
+                        NCC training and the NCC 'C' Certificate can provide
+                        eligible cadets with opportunities for special entry
+                        routes and SSB-based selection in the Armed Forces,
+                        subject to the applicable recruitment rules.
+                    </p>
+
+                    <ul class="benefit-list">
+
+                        <li>
+                            Special entry opportunities
+                        </li>
+
+                        <li>
+                            SSB interview opportunities
+                        </li>
+
+                        <li>
+                            Opportunities in Army, Navy and Air Force
+                        </li>
+
+                        <li>
+                            Recruitment benefits where officially applicable
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- JOB BENEFITS -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        💼
+                    </div>
+
+                    <h3>
+                        Government &amp; Job Benefits
+                    </h3>
+
+                    <p>
+                        NCC certificates and training may provide additional
+                        weightage, preference or other recruitment benefits in
+                        certain government and uniformed-service recruitments,
+                        depending on the official notification.
+                    </p>
+
+                    <ul class="benefit-list">
+
+                        <li>
+                            Recruitment preference in eligible posts
+                        </li>
+
+                        <li>
+                            Bonus marks or weightage where applicable
+                        </li>
+
+                        <li>
+                            Opportunities in police and paramilitary services
+                        </li>
+
+                        <li>
+                            Useful leadership and teamwork experience
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- PERSONAL DEVELOPMENT -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌟
+                    </div>
+
+                    <h3>
+                        Personal Development
+                    </h3>
+
+                    <p>
+                        NCC helps cadets develop discipline, confidence,
+                        leadership, communication skills and a strong sense
+                        of responsibility.
+                    </p>
+
+                    <ul class="benefit-list">
+
+                        <li>
+                            Leadership development
+                        </li>
+
+                        <li>
+                            Self-confidence and discipline
+                        </li>
+
+                        <li>
+                            Teamwork and communication
+                        </li>
+
+                        <li>
+                            Sense of responsibility and service
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ADVENTURE -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🏔️
+                    </div>
+
+                    <h3>
+                        Adventure &amp; Training
+                    </h3>
+
+                    <p>
+                        Cadets can participate in a variety of camps and
+                        adventure activities that encourage courage,
+                        endurance and teamwork.
+                    </p>
+
+                    <ul class="benefit-list">
+
+                        <li>
+                            Mountaineering
+                        </li>
+
+                        <li>
+                            Rock climbing
+                        </li>
+
+                        <li>
+                            Trekking and camping
+                        </li>
+
+                        <li>
+                            Sailing and outdoor activities
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- YOUTH EXCHANGE -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Youth Exchange Programme
+                    </h3>
+
+                    <p>
+                        Eligible cadets may get opportunities to participate
+                        in international Youth Exchange Programmes and interact
+                        with young people from other countries.
+                    </p>
+
+                    <ul class="benefit-list">
+
+                        <li>
+                            International exposure
+                        </li>
+
+                        <li>
+                            Cultural exchange
+                        </li>
+
+                        <li>
+                            International interaction
+                        </li>
+
+                        <li>
+                            Development of global awareness
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SCHOLARSHIPS -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Scholarships &amp; Recognition
+                    </h3>
+
+                    <p>
+                        Eligible and meritorious cadets may receive scholarships,
+                        financial assistance or recognition through applicable
+                        NCC welfare and scholarship programmes.
+                    </p>
+
+                    <ul class="benefit-list">
+
+                        <li>
+                            Scholarship opportunities
+                        </li>
+
+                        <li>
+                            Cadet welfare support
+                        </li>
+
+                        <li>
+                            Recognition for achievements
+                        </li>
+
+                        <li>
+                            Encouragement for meritorious cadets
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="benefits-note">
+
+                <strong>Important:</strong>
+
+                NCC benefits, special entries, vacancies, recruitment
+                preferences and scholarship eligibility depend on the
+                applicable service, organisation and current official
+                notification.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+                Be Part of NCC
+            </h2>
+
+            <p>
+                Take the first step towards discipline, leadership and service.
+            </p>
+
+            <button
+                class="btn btn-primary"
+                onclick="openModal()">
+
+                Register for NCC
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section
+        class="contact"
+        id="contact">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    Contact Us
+                </h2>
+
+                <div class="line"></div>
+
+                <p>
+                    Connect with the NCC team at CUTM, Paralakhemundi.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-card">
+
+                    <div class="card-icon">
+                        👤
+                    </div>
+
+                    <h3>
+                        Contact Person
+                    </h3>
+
+                    <p>
+                        JUO Md Sarfuddin Ansari
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="card-icon">
+                        📞
+                    </div>
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <a href="tel:8678054682">
+                        8678054682
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="card-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        CUTM, Paralakhemundi
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="card-icon">
+                        📷
+                    </div>
+
+                    <h3>
+                        Instagram
+                    </h3>
+
+                    <a
+                        href="https://www.instagram.com/ncc_cutm_pkd?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        @ncc_cutm_pkd
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="card-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        University
+                    </h3>
+
+                    <p>
+                        Centurion University of Technology and Management
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="card-icon">
+                        🇮🇳
+                    </div>
+
+                    <h3>
+                        NCC Motto
+                    </h3>
+
+                    <p>
+                        Unity and Discipline
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © <span id="year"></span>
+                NCC CUTM Paralakhemundi.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Designed with dedication for NCC.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         HIDDEN IFRAME FOR GOOGLE FORM
+    ========================================== -->
+
+    <iframe
+        name="googleFormTarget"
+        id="googleFormTarget"
+        style="display: none;">
+    </iframe>
+
+
+    <!-- =========================================
+         REGISTRATION MODAL
+    ========================================== -->
+
+    <div
+        class="modal"
+        id="registrationModal">
+
+        <div class="modal-content">
+
+            <span
+                class="close"
+                onclick="closeModal()">
+
+                &times;
+
+            </span>
+
+
+            <h2>
+                NCC Registration
+            </h2>
+
+
+            <form
+                id="registrationForm"
+                onsubmit="submitRegistration(event)">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registrationNumber">
+                        Registration Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registrationNumber"
+                        name="registrationNumber"
+                        placeholder="Enter registration number"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="course">
+                        Course
+                    </label>
+
+                    <select
+                        id="course"
+                        name="course"
+                        required>
+
+                        <option value="">
+                            Select your course
+                        </option>
+
+                        <option value="B.Tech">
+                            B.Tech
+                        </option>
+
+                        <option value="B.Sc">
+                            B.Sc
+                        </option>
+
+                        <option value="BBA">
+                            BBA
+                        </option>
+
+                        <option value="BCA">
+                            BCA
+                        </option>
+
+                        <option value="MBA">
+                            MBA
+                        </option>
+
+                        <option value="M.Tech">
+                            M.Tech
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="branch">
+                        Branch
+                    </label>
+
+                    <input
+                        type="text"
+                        id="branch"
+                        name="branch"
+                        placeholder="Enter your branch"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="contactNumber">
+                        Contact Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="contactNumber"
+                        name="contactNumber"
+                        placeholder="Enter 10-digit contact number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary submit-btn">
+
+                    Submit Registration
+
+                </button>
+
+
+                <p class="form-note">
+                    Your registration details will be submitted to the
+                    NCC Google Form.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        /* Current year */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        /* Mobile menu */
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navLinks")
+                .classList
+                .toggle("active");
+
+        }
+
+
+        function closeMenu() {
+
+            document
+                .getElementById("navLinks")
+                .classList
+                .remove("active");
+
+        }
+
+
+        /* Open registration modal */
+
+        function openModal() {
+
+            document
+                .getElementById("registrationModal")
+                .style.display = "block";
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        /* Close registration modal */
+
+        function closeModal() {
+
+            document
+                .getElementById("registrationModal")
+                .style.display = "none";
+
+            document.body.style.overflow = "auto";
+
+        }
+
+
+        /* Close modal when clicking outside */
+
+        window.addEventListener("click", function(event) {
+
+            const modal =
+                document.getElementById("registrationModal");
+
+            if (event.target === modal) {
+
+                closeModal();
+
+            }
+
+        });
+
+
+        /* Close modal using Escape */
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+
+                closeModal();
+
+            }
+
+        });
+
+
+        /* =========================================
+           GOOGLE FORM SUBMISSION
+        ========================================== */
+
+        function submitRegistration(event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document
+                    .getElementById("name")
+                    .value
+                    .trim();
+
+
+            const registrationNumber =
+                document
+                    .getElementById("registrationNumber")
+                    .value
+                    .trim();
+
+
+            const course =
+                document
+                    .getElementById("course")
+                    .value;
+
+
+            const branch =
+                document
+                    .getElementById("branch")
+                    .value
+                    .trim();
+
+
+            const contactNumber =
+                document
+                    .getElementById("contactNumber")
+                    .value
+                    .trim();
+
+
+            /* Required fields validation */
+
+            if (
+                !name ||
+                !registrationNumber ||
+                !course ||
+                !branch ||
+                !contactNumber
+            ) {
+
+                alert(
+                    "Please fill in all the fields."
+                );
+
+                return;
+
+            }
+
+
+            /* Contact number validation */
+
+            if (
+                !/^[0-9]{10}$/.test(contactNumber)
+            ) {
+
+                alert(
+                    "Please enter a valid 10-digit contact number."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * Create temporary Google Form
+             */
+
+            const googleForm =
+                document.createElement("form");
+
+
+            googleForm.method = "POST";
+
+
+            googleForm.action =
+                "https://docs.google.com/forms/d/e/" +
+                "1FAIpQLScPo9CiqiVzc8RAb9pfVInJrA8HX85WHnm81RW0DR66QMHbvg/" +
+                "formResponse";
+
+
+            googleForm.target =
+                "googleFormTarget";
+
+
+            googleForm.style.display =
+                "none";
+
+
+            /*
+             * Google Form field mapping
+             */
+
+            const fields = {
+
+                "entry.455087882":
+                    name,
+
+                "entry.943218903":
+                    registrationNumber,
+
+                "entry.1190601500":
+                    course,
+
+                "entry.512480644":
+                    branch,
+
+                "entry.1410023633":
+                    contactNumber
+
+            };
+
+
+            /*
+             * Create hidden inputs
+             */
+
+            for (
+                const [fieldName, fieldValue]
+                of Object.entries(fields)
+            ) {
+
+                const input =
+                    document.createElement("input");
+
+
+                input.type =
+                    "hidden";
+
+
+                input.name =
+                    fieldName;
+
+
+                input.value =
+                    fieldValue;
+
+
+                googleForm.appendChild(input);
+
+            }
+
+
+            /*
+             * Add form to webpage
+             */
+
+            document.body.appendChild(
+                googleForm
+            );
+
+
+            /*
+             * Submit to Google Forms
+             */
+
+            googleForm.submit();
+
+
+            /*
+             * Confirmation
+             */
+
+            alert(
+                "Your registration has been submitted. " +
+                "Please verify it in the Google Form responses."
+            );
+
+
+            /*
+             * Reset website form
+             */
+
+            document
+                .getElementById("registrationForm")
+                .reset();
+
+
+            /*
+             * Close modal
+             */
+
+            closeModal();
+
+
+            /*
+             * Remove temporary form
+             */
+
+            setTimeout(function() {
+
+                googleForm.remove();
+
+            }, 1500);
+
+        }
+
+    </script>
+
+</body>
+</html>
